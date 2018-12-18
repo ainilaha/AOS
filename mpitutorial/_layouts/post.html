@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<script>
+    function translations(list) {
+        // Even list is empty, list.split(",") will produce at least one element..
+        if (list.length === 0) return "";
+        var languages, i, output = "Translations: ";
+
+        languages = list.split(",");
+
+        for (i = 0; i < languages.length; i++) {
+            if (i !== 0) {
+                output += ", ";
+            }
+
+            if (languages[i] == "zh_cn") {
+                output += "<a href=\"{{ page.url }}/zh_cn\">中文版</a>";
+            } else if (languages[i] == "es") {
+                output += "<a href=\"{{ site.baseurl }}/{{ page.folder }}/es\">Español</a>";
+            }
+        }
+
+        return output;
+    }
+</script>
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <i>Author: {{ page.author }}</i><br>
+  <script> document.write(translations("{{ page.translations }}")) </script>
+  <hr />
+
+  {{ content }}
+</div>
+
+<h2>Want to contribute?</h2>
+<div class='contributing'>
+This site is hosted entirely on <a href="{{ site.github.code }}">GitHub</a>. This site is no longer being actively contributed to by the original author (Wes Kendall), but it was placed on GitHub in the hopes that others would write high-quality MPI tutorials. Click <a href="{{ site.baseurl }}/about/">here</a> for more information about how you can contribute.
+</div>
+<br/>
+
+{% include comments.html %}
+
+<br />

@@ -1,0 +1,5 @@
+2
+exec 1
+send 1 2 "silly message"
+send 1 2 "res messaf"
+end

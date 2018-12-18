@@ -1,0 +1,13 @@
+7
+exec 1
+send 1 2 "silly message0"
+send 3 1 "silly message1"
+send 4 5 "silly message2"
+send 6 5 "silly message3"
+exec 5
+send 5 6 "silly message4"
+exec 3
+send 2 7 "silly message5"
+send 5 1 "silly message6"
+send 6 2 "silly message7"
+end

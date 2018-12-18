@@ -1,0 +1,16 @@
+5
+exec 5
+send 5 2 "mes12"
+exec 2
+send 2 5 "mes21"
+exec 2
+send 2 1 "mes23"
+exec 3
+send 3 4 "mes21"
+exec 5
+send 5 1 "mes32"
+exec 2
+send 2 3 "mes13"
+exec 1
+send 1 5 "mes36"
+end
